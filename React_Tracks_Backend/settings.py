@@ -36,9 +36,19 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    #     Creaated apps
+    # third party apps
+
+    'graphene_django',
+
+    #     Created apps
     'tracks.apps.TracksConfig',
+
+
 ]
+
+GRAPHENE = {
+    'SCHEMA': 'React_Tracks_Backend.schema.schema'
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
