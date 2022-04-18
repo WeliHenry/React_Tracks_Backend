@@ -1,9 +1,14 @@
 import graphene
-import tracks.schema
+
+from tracks import schema
 
 
-class Query(tracks.schema.Query, graphene.ObjectType):
+class Query(schema.Query, graphene.ObjectType):
     pass
 
 
-schema = graphene.Schema(query=Query)
+class Mutation(schema.Mutation, graphene.ObjectType):
+    pass
+
+
+schema = graphene.Schema(query=Query, mutation=Mutation)
