@@ -12,7 +12,7 @@ class UserType(DjangoObjectType):
 
 class Query(graphene.ObjectType):
     user = graphene.Field(UserType, id=graphene.Int(required=True))
-    me =  graphene.Field(UserType)
+    me = graphene.Field(UserType)
 
     def resolve_user(self, info, id):
         return get_user_model().objects.get(id=id)
